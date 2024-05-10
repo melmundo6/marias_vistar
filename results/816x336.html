@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>base buchanans</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="../index.css">
+    </head>
+
+    <body>
+        <figure>
+            <img src="../img/816x336.jpg" alt="Image" width="816px" height="336px"/>
+            <img class="img-816x336 rotate change" alt="Image instagram"/>
+            <div class="text-container-816x336 texto"></div>
+        </figure>
+        <script>
+            window.onload = function() {
+                // Verificamos si hay algo almacenado en localStorage
+                var storedImage = localStorage.getItem("uploadedImage");
+                var storedText = localStorage.getItem("uploadedText");
+            
+                if (storedImage) {
+                    document.querySelector(".change").src = storedImage;
+                }
+            
+                if (storedText) {
+                    document.querySelector(".texto").innerText = storedText;
+                }
+            }
+            </script>
+            
+    </body>
+</html>
