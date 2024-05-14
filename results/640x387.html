@@ -16,9 +16,8 @@
         </figure>
         <script>
             window.onload = function() {
-                // Verificamos si hay algo almacenado en localStorage
                 var storedImage = localStorage.getItem("uploadedImage");
-                var storedText = localStorage.getItem("uploadedText");
+                var storedText  = localStorage.getItem("uploadedText");
             
                 if (storedImage) {
                     document.querySelector(".change").src = storedImage;
